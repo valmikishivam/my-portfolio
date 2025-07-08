@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/x-icon" href="/assets/dp.jpg">
+    <title>shivfolio-portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h4 class="logo hltext">shivfolio</h4>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">contact us</a></li>
+            <li id="dark">☽</li>
+        </ul>
+
+        <i id="menu">☰</i>
+    </header>
+    <main>
+        <section class="sec-container" id="hero">
+            <div class="wrapper  hero">
+                <div class="heroimg">
+                    <img src="assets/profile.jpg">
+                </div>
+                <div class="herodetails">
+                    <h2>i am <span class="hltext">shivam valmiki</span></h2>
+                    <h3>iam a <span class="hltext">frontend web developer</span></h3>
+                    <p>welcome to my profile <br> iam an independent web developer from delhi (INDIA) </p>
+                    <div class="heroicon">
+                        <i>in</i>
+                        <i>🅾</i>
+                        <i>𝕏</i>
+                    </div>
+                    <div class="herobtn">
+                        <button type="button" class="btn btntive"><a href="mailto:shivamvalmiki976@gmail.com">Hire me</a></button>
+                        <button type="button" class="btn"><a href="#about">Read more</a></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-container" id="projects">
+            <h2 class="sec-heading">MY<span class="hltext"> PROJECTS</span></h2>
+            <div class="wrapper project">
+                <div class="procard">
+                    <div class="proimg">
+                        <h3 class="hltext">Project 1</h3>
+                        <img src="assets/p1.PNG" />
+                    </div>
+                    <div class="prodeatils">
+                        <h2>This is my first project .</h2>
+                        <p>I build a shop application with the help of html, css and java script .</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec-container" id="services">
+            <h2 class="sec-heading">MY<span class="hltext"> SERVICES</span></h2>
+            <div class="wrapper servicebox">
+                <div class="servicecard">
+                    <h4 class="hltext">frontend web design</h4>
+                    <img src="assets/p1.jpg" />
+                    <p>unlock the full potential of your online presence with our frontend development expertise. we
+                        build website that are not only visually stunning but also highly functional and user friendly,.
+                    </p>
+                </div>
+                <div class="servicecard">
+                    <h4 class="hltext">web performance optimizatione</h4>
+                    <img src="assets/p2.jpg" />
+                    <p>We use the latest techniques and tools to optimizeimages,minify code,improve server response
+                        time,leverage browser caching,and avoid render-blocking resurces,resulting is faster page
+                        loading.</p>
+                </div>
+                <div class="servicecard">
+                    <h4 class="hltext">responsive design</h4>
+                    <img src="assets/p3.jpg" />
+                    <p>our website features a responsive design, ensuring user experience acreoss all devices,from
+                        desktop to smartphone. we ensure that the website is perfectly fit in all devices and work
+                        properly without any problem.</p>
+                </div>
+                <div class="servicecard">
+                    <h4 class="hltext">mobile first design</h4>
+                    <img src="assets/p4.png" />
+                    <p>we also specialize in mibile-first web design, prioritizing simple and clean visualisation to
+                        ensure user seamless user experience across all devices.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sec-container" id="about">
+            <h2 class="sec-heading">ABOUT<span class="hltext"> ME</span></h2>
+            <div class="wrapper aboutbox">
+                <img src="assets/profile.jpg" />
+                <p>
+                   <h4>Hello i am <span class="hltext">Shivam Valmiki</span>,</h4>a frontend web    developer with a passion
+                   for creating visually stunning and highly functional web application with expertise    in html, css,
+                   javascript, i bring design to life and ensure seamless user experiences. my toolkit    includes React,
+                   Anguar ,and Vue and i'm always eager to explore new texchnologies and trends .lets    collaborate to build
+                   something amazing!
+                </p>
+                <p class="cvlink">Download Resume here - <a href="assets/my resume.docx">click</a></p>
+            </div>
+        </section>
+        <section class="sec-container" id="contact">
+            <h2 class="sec-heading">CONTACT<span class="hltext"> ME</span></h2>
+            <div class="wrapper contactbox">
+                <div class="filed1">
+                    <label for="uname" requried>full name</label>
+                    <input type="text" name="uname" placeholder="enter full name">
+                    <label for="email" required>email</label>
+                    <input type="email" name="email" placeholder="enter your email">
+                    <label for="password" required>password</label>
+                    <input type="password" name="password" placeholder="enter your password">
+                </div>
+
+                <div class="filed2">
+                    <label for="message">message</label>
+                    <textarea name="message" rows="10" placeholder="your message"></textarea>
+                    <button type="button" class="btn">sumit</button>
+                </div>
+            </div>
+        </section>
+       
+    </main>
+    <footer>
+        <p class="hltext">
+           copyright &copy;2025 shivfolio | all right reserved
+        </p>
+    </footer>
+
+</body>
+<script>
+    val = true;
+    const navlist = document.querySelector('header ul');
+    document.querySelector('#menu').addEventListener('click', () => {
+        if (val) {
+            navlist.style.display = "flex";
+            val = false;
+        } else {
+            navlist.style.display = "none";
+            val = true;
+        }
+    })
+    const themebtn = document.querySelector('#dark');
+    themebtn.onclick=()=>{
+        document.body.classList.toggle("dark");
+        if(document.body.classList.contains('dark')){
+            themebtn.innerText="☀︎"
+        }else{
+            themebtn.innerText="☽"
+
+        }
+       
+    }
+</script>
+
+</html>
